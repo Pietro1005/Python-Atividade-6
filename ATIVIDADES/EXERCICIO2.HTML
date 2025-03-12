@@ -1,0 +1,14 @@
+def soma_digitos(numero):
+    soma = 0
+    for digito in str(numero):
+        soma += int(digito)  # Converte o caractere para inteiro e soma
+    return soma
+
+# Solicita o número do usuário
+numero = input("Digite um número inteiro: ")
+
+# Verifica se o número é inteiro
+if numero.isdigit():  # Verifica se todos os caracteres são dígitos
+    print(f"A soma dos dígitos do número {numero} é: {soma_digitos(numero)}")
+else:
+    print("Valor inválido! Por favor, insira um número inteiro.")

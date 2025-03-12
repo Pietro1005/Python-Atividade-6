@@ -1,0 +1,29 @@
+def soma_digitos(numero):
+    soma = 0
+    for digito in str(numero):
+        soma += int(digito)
+    return soma
+
+# Solicita as temperaturas
+try:
+    temp_max = float(input("Digite a temperatura máxima do dia: "))
+    temp_min = float(input("Digite a temperatura mínima do dia: "))
+    
+    # Calcula a média e a variação das temperaturas
+    media_temp = (temp_max + temp_min) / 2
+    variacao_temp = temp_max - temp_min
+
+    print(f"A média entre as temperaturas é: {media_temp:.2f}°C")
+    print(f"A variação entre as temperaturas é: {variacao_temp:.2f}°C")
+
+except ValueError:
+    print("Valores de temperatura inválidos. Por favor, insira números válidos.")
+
+# Solicita o número para somar os dígitos
+numero = input("Digite um número para somar seus dígitos: ")
+
+# Verifica se o número é um inteiro
+if numero.isdigit():
+    print(f"A soma dos dígitos é: {soma_digitos(numero)}")
+else:
+    print("Valor inválido! Por favor, insira um número inteiro.")
